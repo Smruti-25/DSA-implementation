@@ -9,8 +9,6 @@ class Node{
 class DoublyLinkedList{
   constructor(value){
     this.head = new Node(value);
-    this.next = null;
-    this.prev = null;
     this.tail = this.head;
     this.length = 1;
   }
