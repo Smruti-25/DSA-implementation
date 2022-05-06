@@ -1,6 +1,6 @@
 //iterative
 
-function binarysearch( array, value ){
+function binarySearch( array, value ){
   let low = 0;
   let high = array.length - 1;
   
@@ -16,4 +16,4 @@ function binarysearch( array, value ){
 }
 
 const array = [0 ,1 ,2, 3, 4, 5, 6, 7];
-console.log("binarysearch", binarysearch( array, 033 ));
+console.log("binarysearch", binarySearch( array, 033 ));
