@@ -6,6 +6,7 @@ class Node{
   }
 }
 
+//testing out in js
 class DoublyLinkedList{
   constructor(value){
     this.head = new Node(value);
