@@ -13,9 +13,6 @@ class LinkedList {
 
   append(value){
     const newNode = new Node(value);
-    if(this.head === null){
-      this.head = newNode;
-    }
     let currentNode = this.head;
     while(currentNode.next !== null){
       currentNode = currentNode.next;
@@ -26,7 +23,8 @@ class LinkedList {
   }
 
   prepend(value){
-    
+    const newNode = new Node(value);
+
   }
 }
 
