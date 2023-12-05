@@ -30,6 +30,10 @@ class LinkedList {
   insert(index, value){
     const newNode =  new Node(value);
     let currentNode = this.head;
+    for(let i=0; i<index; i++){
+      currentNode = currentNode.next;
+    }
+
   }
 
   printList(){
