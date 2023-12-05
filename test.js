@@ -27,6 +27,11 @@ class LinkedList {
     this.printList();
   }
 
+  insert(index, value){
+    const newNode =  new Node(value);
+    let currentNode = this.head;
+  }
+
   printList(){
     const list = [];
     let currentNode = this.head;
