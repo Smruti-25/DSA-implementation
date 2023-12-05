@@ -28,14 +28,24 @@ class LinkedList {
   }
 
   insert(index, value){
-    const newNode =  new Node(value);
-    let currentNode = this.head;
-    for(let i=0; i<index; i++){
-      currentNode = currentNode.next;
+    if(index > this.length){
+      this.append(value);
     }
-    newNode.next = currentNode.next;
-    currentNode.next = newNode;
+    const newNode =  new Node(value);
+    const prevNode = this.traverseToIndex(index-1);
+    newNode.next = prevNode.next;
+    prevNode.next = newNode;
     this.printList();
+  }
+
+  traverseToIndex(index){
+    let counter = 0;
+    let currentNode = this.head;
+    while(counter !== index){
+      currentNode = currentNode.next;
+      counter++;
+    }
+    return currentNode;
   }
 
   printList(){
@@ -54,4 +64,3 @@ myList.append(5);
 myList.append(16);
 myList.prepend(1);
 myList.insert(2,14);
-console.log(myList);
