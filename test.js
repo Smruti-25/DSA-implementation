@@ -41,4 +41,5 @@ class LinkedList {
 const myList = new LinkedList(10);
 myList.append(5);
 myList.append(16);
+myList.prepend(1);
 console.log(myList);
