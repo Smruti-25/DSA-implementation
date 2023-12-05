@@ -25,3 +25,6 @@ class LinkedList {
     this.length++;
   }
 }
+
+const myList = new LinkedList(10);
+console.log(myList);
