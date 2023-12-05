@@ -33,7 +33,7 @@ class LinkedList {
     for(let i=0; i<index; i++){
       currentNode = currentNode.next;
     }
-    newNode = currentNode.next;
+    newNode.next = currentNode.next;
     currentNode.next = newNode;
     this.printList();
   }
@@ -53,4 +53,5 @@ const myList = new LinkedList(10);
 myList.append(5);
 myList.append(16);
 myList.prepend(1);
+myList.insert(2,14);
 console.log(myList);
