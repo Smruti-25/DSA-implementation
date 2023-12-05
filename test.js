@@ -24,6 +24,10 @@ class LinkedList {
     this.tail = newNode;
     this.length++;
   }
+
+  prepend(value){
+    
+  }
 }
 
 const myList = new LinkedList(10);
