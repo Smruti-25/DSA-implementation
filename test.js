@@ -13,11 +13,7 @@ class LinkedList {
 
   append(value){
     const newNode = new Node(value);
-    let currentNode = this.head;
-    while(currentNode.next !== null){
-      currentNode = currentNode.next;
-    }
-    currentNode.next = newNode;
+    this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
   }
