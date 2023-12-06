@@ -35,6 +35,14 @@ class LinkedList {
     const prevNode = this.traverseToIndex(index-1);
     newNode.next = prevNode.next;
     prevNode.next = newNode;
+    this.length++;
+    this.printList();
+  }
+
+  remove(index){
+    const prevNode = this.traverseToIndex(index-1);
+    prevNode.next = prevNode.next.next;
+    this.length--;
     this.printList();
   }
 
@@ -64,3 +72,5 @@ myList.append(5);
 myList.append(16);
 myList.prepend(1);
 myList.insert(2,14);
+myList.insert(3,17);
+myList.remove(5);
